@@ -107,7 +107,7 @@ fn setup_bin_wrapper(link_info: &mut LinkInfo) -> Result<()> {
     std::fs::write(
         bin_path,
         format!(
-            "#!/bin/bash\n\
+            "#!/usr/bin/env bash\n\
              if [ -x \"{cackle_exe}\" ]; then\n\
                 \"{cackle_exe}\" {PROXY_BIN_ARG} {selector_token} \"{bin_path_utf8}\" \"$@\" \n\
              else\n\
